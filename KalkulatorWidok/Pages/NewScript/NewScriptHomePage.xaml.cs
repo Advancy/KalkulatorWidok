@@ -42,10 +42,18 @@ namespace KalkulatorWidok.Pages.NewScript
 
             fieldsDisplayNames.ForEach(element =>
             {
+                var sibling = element.NextSibling;
+                var values = sibling.ChildNodes.ToList();
+                List<String> valuesNames = new List<string>();
+                values.ForEach(val =>
+                {
+                    valuesNames.Add(val.InnerText);
+                });
                 fieldsList.Add(new ProductField()
                 {
                     DisplayName = element.InnerText.Remove(element.InnerText.Length - 1),
-                    IdValue = element.NextSibling.GetAttributeValue("id", "wrong_id")
+                    IdValue = element.NextSibling.GetAttributeValue("id", "wrong_id"),
+                    Values = valuesNames
                 });
             });
 
