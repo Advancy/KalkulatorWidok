@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="KalkulatorWidok.Pages.NewScript.NewScriptPropertiesPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Wybór pól" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
+                <mui:BBCodeBlock BBCode="Wybierz pola, które będą brały [b]czynny[/b] udział w wyliczaniu ceny produktu." Margin="0,0,0,16"/>
+
+                <DockPanel>
+                    <DataGrid Name="DG1" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+                        <DataGrid.Columns>
+                            <mui:DataGridTextColumn Header="Wyświetlana nazwa" Binding="{Binding DisplayName}" IsReadOnly="True"/>
+                            <mui:DataGridTextColumn Header="Field_id" Binding="{Binding FieldName}" IsReadOnly="True"/>
+                            <mui:DataGridCheckBoxColumn Header="Aktywny" Binding="{Binding IsActive}" IsReadOnly="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+                <TextBlock Text="Wybór prduktów" Style="{StaticResource Heading2}" Margin="0,10,0,8" />
+                <mui:BBCodeBlock BBCode="Poniżej przedstawiono produkty, dla których zostanie wygenerowany skrypt." Margin="0,0,0,16"/>
+                <DockPanel>
+                    <DataGrid Name="DG2" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+                        <DataGrid.Columns>
+                            <mui:DataGridTextColumn Header="SKU" Binding="{Binding DisplayName}" IsReadOnly="True"/>
+                            <mui:DataGridTextColumn Header="Node Id" Binding="{Binding IdValue}" IsReadOnly="True"/>
+                            <mui:DataGridTextColumn Header="Język" Binding="{Binding ProductLanguage}" IsReadOnly="True"/>
+                            <mui:DataGridCheckBoxColumn Header="Generowanie algorytmu" Binding="{Binding IsActive}" IsReadOnly="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+                <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+                    <Button Content="Dodaj kolejny produkt" Margin="20,20,0,10" Click="Button_Click" />
+                </StackPanel>
+                <Button Content="Dalej" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="75" Margin="10" Click="Button_Click_1"/>
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalkulatorWidok", "KalkulatorWidok\KalkulatorWidok.csproj", "{D61F4211-FABA-403C-848D-ABCCBEF76AC9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{D514B0C7-F782-4025-8F86-5982EF9C0A1D}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{d514b0c7-f782-4025-8f86-5982ef9c0a1d}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D61F4211-FABA-403C-848D-ABCCBEF76AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61F4211-FABA-403C-848D-ABCCBEF76AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61F4211-FABA-403C-848D-ABCCBEF76AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61F4211-FABA-403C-848D-ABCCBEF76AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {367B3B96-03F2-4CA9-BE69-01489ACD3285}
+	EndGlobalSection
+EndGlobal
